@@ -15,6 +15,21 @@ app.use(express.json());
 //Analisa solicitações do tipo conteúdo - x-www-form-urlencoded
 app.use(express.urlencoded({ extended: true }));
 
+const db = require("./app/models");
+
+db.sequelize.sync()
+  .then(() => {
+    console.log("Synced db.");
+  })
+  .catch((err) => {
+    console.log("Failed to sync db: " + err.message);
+  });
+
+// // drop the table if it already exists
+// db.sequelize.sync({ force: true }).then(() => {
+//   console.log("Drop and re-sync db.");
+// });
+
 // simples rota
 
 app.get("/", (req, res) => {
