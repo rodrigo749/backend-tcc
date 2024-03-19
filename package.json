@@ -1,0 +1,16 @@
+{
+  "name": "nodejs-express-myql",
+  "version": "1.0.0",
+  "description": "Node.js Rest Apis with Express, Sequelize and MySql",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "mysql"
+  ],
+  "author": "Rodrigo Neves Ottoboni Dias",
+  "license": "ISC"
+}
